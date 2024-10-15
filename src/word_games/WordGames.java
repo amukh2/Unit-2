@@ -23,7 +23,10 @@ public class WordGames
     {
         // switch first half
         // and second half
-        return "";
+        int index = word.length() / 2;
+        String firstHalf = word.substring(0,index);
+        String secondHalf = word.substring(index);
+        return secondHalf + firstHalf;
 
     }
 
@@ -36,8 +39,12 @@ public class WordGames
     public String bananaSplit(int insertIdx, String insertText)
     {
         // Insert insertText at the position
+
+        String firstHalf = word.substring(0, insertIdx);
+        String secondHalf =  word.substring(insertIdx);
+
         // insertIdx
-        return "";
+        return firstHalf + insertText + secondHalf;
 
     }
 
@@ -52,7 +59,11 @@ public class WordGames
     {
         // Insert insertText after the first
         // occurence of the insertChar
-        return "";
+        int index = word.indexOf(insertChar);
+        String firstHalf = word.substring(0, index);
+        String secondHalf = word.substring(index);
+
+        return firstHalf + insertText + secondHalf;
 
     }
 
@@ -60,7 +71,7 @@ public class WordGames
     public String toString()
     {
         // Games[word]
-        return "";
+        return "[" + word + "]";
 
     }
 
