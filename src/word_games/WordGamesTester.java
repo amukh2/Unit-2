@@ -6,9 +6,17 @@ public class WordGamesTester {
         Scanner input = new Scanner(System.in);
 
         // Ask for a word
+        System.out.println("Enter a word: ");
+        String userWord = input.nextLine();
+
+        //create a WordGames instance to play with userWord
+        WordGames newGames = new WordGames(userWord);
 
         // Scramble it
+        String scrambled = newGames.scramble();
+
         // Print out scrambled word
+        System.out.println(scrambled);
 
         // Ask for an index
         // Ask for random word

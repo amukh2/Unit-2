@@ -23,7 +23,12 @@ public class WordGames
     {
         // switch first half
         // and second half
-        return "";
+        int numChars = word.length();
+        int halfPoint = numChars / 2;
+        String firstHalf = word.substring(0,halfPoint);
+        String secondHalf = word.substring(halfPoint);
+
+        return secondHalf + firstHalf;
 
     }
 
